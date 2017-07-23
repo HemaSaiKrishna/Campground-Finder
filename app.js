@@ -17,8 +17,8 @@ var indexRoutes=require("./routes/index");
     
 //App Config
 mongoose.Promise = global.Promise;
-//mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb://hsk:password@ds117913.mlab.com:17913/yelp_camp");
+mongoose.connect(process.env.DATABASEURL);
+//mongoose.connect("mongodb://hsk:password@ds117913.mlab.com:17913/yelp_camp");
 app.set("view engine","ejs");
 app.use(bodyparser.urlencoded({extended : true}));
 app.use(express.static(__dirname + "/public"));
