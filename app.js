@@ -9,7 +9,8 @@ var express= require("express"),
     User=require("./models/user"),
     seedDB=require("./seeds"),
     flash=require("connect-flash"),
-    methodOverride=require("method-override");
+    methodOverride=require("method-override"),
+    geocoder=require("geocoder");
     
 var campgroundRoutes=require("./routes/campgrounds");
 var commentRoutes=require("./routes/comments");
