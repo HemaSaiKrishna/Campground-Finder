@@ -15,6 +15,8 @@ var express= require("express"),
 var campgroundRoutes=require("./routes/campgrounds");
 var commentRoutes=require("./routes/comments");
 var indexRoutes=require("./routes/index");
+
+app.locals.moment=require("moment");
     
 //App Config
 mongoose.Promise = global.Promise;
